@@ -10,9 +10,9 @@
             text-align: center;
         }
         .table-container {
-            border: 2px solid black; 
-            padding: 30px;
-            display: inline-block; 
+            border: 2px solid black; /* Border around the table and caption */
+            padding: 10px;
+            display: inline-block; /* Ensures the border only wraps the table */
             margin: 20px auto;
             width: 100%;
         }
@@ -41,13 +41,19 @@
         .right {
             text-align: right;
         }
+        /* Apply yellow background for even rows */
         tbody tr:nth-child(even) td {
             background-color: yellow;
         }
+        /* Apply white background only to department cells in the first column */
         tbody tr td:first-child {
             font-weight: bold;
-            text-align: center;
+            text-align: left; /* Align the department name to the left */
+            background-color: white; /* White background for department cells */
+            vertical-align: top; /* Align text to the top of the cell */
+            padding-left: 1em; /* Add left padding for better spacing */
         }
+        /* Ensure all other cells (not first column) have normal weight */
         tbody tr td:not(:first-child) {
             font-weight: normal;
         }
@@ -75,7 +81,7 @@
         </thead>
         <tbody>
             <tr>
-                <td class="left" rowspan="3"><b>Editoral</b></td>
+                <td rowspan="3"><b>Editorial</b></td>
                 <td>Joel Murach</td>
                 <td>joelmurach@yahoo.com</td>
                 <td class="right">22</td>
@@ -91,7 +97,7 @@
                 <td class="right">4</td>
             </tr>
             <tr>
-                <td class="left" rowspan="2"><b>Marketing</b></td>
+                <td rowspan="2"><b>Marketing</b></td>
                 <td>Judy Taylor</td>
                 <td>judy@murach.com</td>
                 <td class="right">39</td>
@@ -102,7 +108,7 @@
                 <td class="right">10</td>
             </tr>
             <tr>
-                <td class="left" rowspan="2"><b>Customer Service</b></td>
+                <td rowspan="2"><b>Customer Service</b></td>
                 <td>Kelly Slivkoff</td>
                 <td>kelly@murach.com</td>
                 <td class="right">25</td>
